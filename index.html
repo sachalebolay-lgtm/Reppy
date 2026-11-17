@@ -6,6 +6,7 @@
 <title>Reppy</title>
 <meta name="description" content="Reppy génère chaque jour ta séance sans matériel, un peu plus dure chaque semaine.">
 <meta name="theme-color" content="#F4EFE6">
+<script async src="https://firstmrr.app/app/t.js" data-key="pk_eb67129449d828077ad4a4cd"></script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Reppy">
@@ -597,6 +598,7 @@ function startGen(){
     save();
     ui.stage = 'result';
     render(true);
+    if (!state.activated){ state.activated = true; save(); window.firstmrr?.track("activation"); }
   }, 3000));
 }
 
